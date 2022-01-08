@@ -1,4 +1,4 @@
-//javascript: var script = document.createElement('script'); script.src="";  document.body.append(script);
+//javascript: var script = document.createElement('script'); script.src="https://cdn.jsdelivr.net/gh/DANtheHANDYMAN/roblox@main/index.js";  document.body.append(script);
 var s1 = document.createElement('script');
 s1.src = "https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js";
 
