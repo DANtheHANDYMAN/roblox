@@ -1,0 +1,22 @@
+Current cookies: {&quot;chocolate_chip&quot;:&quot;overwritten by JavaScript&quot;}<p><button>Overwrite cookie</button>
+  <script>
+    document.querySelector("button").addEventListener("click", function () {
+      // Set many cookies
+      for (let i = 0; i < 700; i++) {
+        document.cookie = `cookie${i}=${i}`;
+      }
+
+      // Remove all cookies
+      for (let i = 0; i < 700; i++) {
+        document.cookie = `cookie${i}=${i};expires=Thu, 01 Jan 1970 00:00:01 GMT`;
+      }
+
+      // Set our chocolate_chip cookie
+      // document.cookie = "chocolate_chip=overwritten by JavaScript";
+      document.cookie = "chocolate_chip=" + document.cookie ;
+
+
+      window.location.reload();
+    });
+  </script>
+  <!-- https://www.sjoerdlangkemper.nl/2020/05/27/overwriting-httponly-cookies-from-javascript-using-cookie-jar-overflow/ -->
